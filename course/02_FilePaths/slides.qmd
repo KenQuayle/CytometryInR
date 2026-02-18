@@ -1,7 +1,7 @@
 ---
 title: "02 - File Paths"
 author: "David Rach"
-date: 02-09-2026
+date: 02-16-2026
 format:
   revealjs:
     theme: default
@@ -962,7 +962,7 @@ So here we encounter the first challenge when communicating to our computer wher
 
 ::: {.fragment}
 ::: {.callout-tip title="."}
-One way we can do this is through a file.path argument. We could potentially provide this by adding either a / or a \ into the path argument, depending on your computers operating system. 
+One way we can do this is through a file.path argument. We could potentially provide this by adding either a "/" or a "\" into the path argument, depending on your computers operating system. 
 :::
 :::
 
@@ -1092,7 +1092,7 @@ You will notice, the index numbers are in the context of what is filtered, not a
 
 ::: {.fragment}
 ::: {.callout-tip title="."}
-You will notice, in the above example, we provided a character string ("ND050") that was used to return files that contained the matching pattern. If we currently listed the files within data, we get a return that looks like this:
+If we currently listed the files within data, we get a return that looks like this:
 :::
 :::
 
@@ -1700,15 +1700,20 @@ Plug in an external hard-drive or USB into your computer. Manually, create a fol
 ---
 
 :::{.callout-tip title="Problem 2"}
-In this session, we used list.files with the full.names argument, as well as the `basename()` function to identify specific files. But what if you wanted a particular directory. Run list.files with recursive set to TRUE, and then search online to find an R function that would retrieve the "" directory. 
+In this session, we used `list.files()` with the "full.names argument" set to TRUE, as well as the `basename()` function to identify specific files. But what if you wanted a particular directory. Run `list.files()` with "full.names argument" and "recursive" argument set to TRUE, and then search online to find an R function that would retrieve the "" individual directory folders. 
 :::
 
 ---
 
 :::{.callout-tip title="Problem 3"}
-R packages often come with internal datasets, that are typically used for use in the help documentation examples. These can be accessed through the use of the `system.file()` function. See an example below. 
+R packages often come with internal datasets, that are typically used for use in the help documentation examples. These can be accessed through the use of the `system.file()` function. See an example code below. 
 
-Using what we have learned about file.path navigation, search your way down the file.directory of the `flowSOM` and `flowWorkspace` packages, and identify any .fcs files that are present for use in the documentation. 
+```{r}
+#| eval: FALSE
+system.file("extdata", package = "FlowSOM")
+```
+
+Using what we have learned about file.path navigation, search your way down the file.directory of the `FlowSOM` and `flowWorkspace` packages, and identify any .fcs files that are present for use in the documentation. 
 :::
 
 ---

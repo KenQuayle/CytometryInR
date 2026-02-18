@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.32">
 
   <meta name="author" content="David Rach">
-  <meta name="dcterms.date" content="2026-02-09">
+  <meta name="dcterms.date" content="2026-02-16">
   <title>Cytometry in R – 02 - File Paths</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -213,7 +213,7 @@ David Rach
 </div>
 </div>
 
-  <p class="date">2026-02-09</p>
+  <p class="date">2026-02-16</p>
 </section>
 <section class="slide level2">
 
@@ -1848,7 +1848,7 @@ David Rach
 <p><strong>.</strong></p>
 </div>
 <div class="callout-content">
-<p>One way we can do this is through a file.path argument. We could potentially provide this by adding either a / or a &nbsp;into the path argument, depending on your computers operating system.</p>
+<p>One way we can do this is through a file.path argument. We could potentially provide this by adding either a “/” or a “" into the path argument, depending on your computers operating system.</p>
 </div>
 </div>
 </div>
@@ -2019,7 +2019,7 @@ David Rach
 <p><strong>.</strong></p>
 </div>
 <div class="callout-content">
-<p>You will notice, in the above example, we provided a character string (“ND050”) that was used to return files that contained the matching pattern. If we currently listed the files within data, we get a return that looks like this:</p>
+<p>If we currently listed the files within data, we get a return that looks like this:</p>
 </div>
 </div>
 </div>
@@ -2823,7 +2823,7 @@ David Rach
 <p><strong>Problem 2</strong></p>
 </div>
 <div class="callout-content">
-<p>In this session, we used list.files with the full.names argument, as well as the <code>basename()</code> function to identify specific files. But what if you wanted a particular directory. Run list.files with recursive set to TRUE, and then search online to find an R function that would retrieve the “” directory.</p>
+<p>In this session, we used <code>list.files()</code> with the “full.names argument” set to TRUE, as well as the <code>basename()</code> function to identify specific files. But what if you wanted a particular directory. Run <code>list.files()</code> with “full.names argument” and “recursive” argument set to TRUE, and then search online to find an R function that would retrieve the “” individual directory folders.</p>
 </div>
 </div>
 </div>
@@ -2841,8 +2841,11 @@ David Rach
 <p><strong>Problem 3</strong></p>
 </div>
 <div class="callout-content">
-<p>R packages often come with internal datasets, that are typically used for use in the help documentation examples. These can be accessed through the use of the <code>system.file()</code> function. See an example below.</p>
-<p>Using what we have learned about file.path navigation, search your way down the file.directory of the <code>flowSOM</code> and <code>flowWorkspace</code> packages, and identify any .fcs files that are present for use in the documentation.</p>
+<p>R packages often come with internal datasets, that are typically used for use in the help documentation examples. These can be accessed through the use of the <code>system.file()</code> function. See an example code below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a></a><span class="fu">system.file</span>(<span class="st">"extdata"</span>, <span class="at">package =</span> <span class="st">"FlowSOM"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Using what we have learned about file.path navigation, search your way down the file.directory of the <code>FlowSOM</code> and <code>flowWorkspace</code> packages, and identify any .fcs files that are present for use in the documentation.</p>
 </div>
 </div>
 </div>

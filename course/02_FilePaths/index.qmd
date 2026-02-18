@@ -13,9 +13,9 @@ toc-depth: 5
 [![AGPL-3.0](https://img.shields.io/badge/license-AGPLv3-blue)](https://www.gnu.org/licenses/agpl-3.0.en.html) [![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 :::
 
-For the YouTube livestream recording, see [here](https://www.youtube.com/live/9AvU24FxY-4?si=HnP2AH8KOj0hmyZv&t=231)
+For the YouTube livestream recording, see [here](https://www.youtube.com/live/fwSu97DYlaU?si=R3DpH9dRuUCexJMN)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9AvU24FxY-4?si=HnP2AH8KOj0hmyZv&amp;start=231" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fwSu97DYlaU?si=R3DpH9dRuUCexJMN&amp;start=22" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 For screen-shot slides, click [here](/course/02_FilePaths/slides.qmd)
@@ -614,7 +614,7 @@ list.files(path="data/target", full.names=FALSE, recursive=FALSE)
 
 <br>
 
-While this works in your particular context, if you are sharing the code with others who have a different operating system, these hard-coded / or \ will cause the code for them to error out at these particular steps. 
+While this works in your particular context, if you are sharing the code with others who have a different operating system, these hard-coded "/" or "\" will cause the code for them to error out at these particular steps. 
 
 ---
 
@@ -673,7 +673,7 @@ You will notice, the index numbers are in the context of what is filtered, not a
 
 ## Selecting for Patterns
 
-You will notice, in the above example, we provided a character string ("ND050") that was used to return files that contained the matching pattern. If we currently listed the files within data, we get a return that looks like this:
+If we currently listed the files within data, we get a return that looks like this:
 
 ```{r}
 #| eval: FALSE
@@ -1034,13 +1034,18 @@ Plug in an external hard-drive or USB into your computer. Manually, create a fol
 :::
 
 :::{.callout-tip title="Problem 2"}
-In this session, we used list.files with the full.names argument, as well as the `basename()` function to identify specific files. But what if you wanted a particular directory. Run list.files with recursive set to TRUE, and then search online to find an R function that would retrieve the "" directory. 
+In this session, we used `list.files()` with the "full.names argument" set to TRUE, as well as the `basename()` function to identify specific files. But what if you wanted a particular directory. Run `list.files()` with "full.names argument" and "recursive" argument set to TRUE, and then search online to find an R function that would retrieve the "" individual directory folders. 
 :::
 
 :::{.callout-tip title="Problem 3"}
 R packages often come with internal datasets, that are typically used for use in the help documentation examples. These can be accessed through the use of the `system.file()` function. See an example below. 
 
-Using what we have learned about file.path navigation, search your way down the file.directory of the `flowSOM` and `flowWorkspace` packages, and identify any .fcs files that are present for use in the documentation. 
+```{r}
+#| eval: FALSE
+system.file("extdata", package = "FlowSOM")
+```
+
+Using what we have learned about file.path navigation, search your way down the file.directory of the `FlowSOM` and `flowWorkspace` packages, and identify any .fcs files that are present for use in the documentation. 
 :::
 
 
