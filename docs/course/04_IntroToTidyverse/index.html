@@ -1399,7 +1399,7 @@ Odd R Behavior # 1
 <pre><code>[1] "INF0032" "INF0159" "INF0179" "INF0166"</code></pre>
 </div>
 </div>
-<p>And finally, since I may want to send the data to a supervisor, let’s go ahead and export this “tidyed” version of our data.frame out to it’s own .fcs file. Working within our project folder, this would look like this:</p>
+<p>And finally, since I may want to send the data to a supervisor, let’s go ahead and export this “tidyed” version of our data.frame out to it’s own .csv file. Working within our project folder, this would look like this:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb111"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a>NewName <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"MyNewDataset"</span>, <span class="st">".csv"</span>)</span>
 <span id="cb111-2"><a href="#cb111-2" aria-hidden="true" tabindex="-1"></a>StorageLocation <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">"data"</span>, NewName)</span>
