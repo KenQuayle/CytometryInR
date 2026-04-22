@@ -455,6 +455,8 @@ Secondly, we would need to save the output to something external that can be ret
 :::
 :::
 
+---
+
 ::: {.fragment}
 ```{r}
 #| message: true
@@ -763,9 +765,18 @@ For this particular counting fluorophore panel, only 3 antibodies were used. Sin
 ::: {.fragment}
 ```{r}
 # remotes::install_github("DavidRach/Luciernaga")
-# install.packages("plotly")
+
 Plots <- Luciernaga::QC_ReferenceLibrary(FluorNameContains="APC$|PE$|Pacific Blue", 
     NumberDetectors=54, returnPlots=TRUE)[[2]]
+```
+
+:::
+
+---
+
+::: {.fragment}
+```{r}
+# install.packages("plotly")
 plotly::ggplotly(Plots)
 ```
 
@@ -876,6 +887,8 @@ And add a general CD45+ gate (i.e. those that I need actual concentration for)
 :::
 :::
 
+---
+
 ::: {.fragment}
 ![](images/00_CD45.png)
 :::
@@ -887,6 +900,8 @@ And add a general CD45+ gate (i.e. those that I need actual concentration for)
 And add a general CD19+ gate (B cells)
 :::
 :::
+
+---
 
 ::: {.fragment}
 ![](images/01_CD19.png)
@@ -900,6 +915,8 @@ And add a general CD14+ (Monocytes)
 :::
 :::
 
+---
+
 ::: {.fragment}
 ![](images/02_CD14.png)
 :::
@@ -912,13 +929,15 @@ And add a general gate for likely T and NK cells
 :::
 :::
 
+---
+
 ::: {.fragment}
 ![](images/03_TandNKprobs.png)
 :::
 
 ---
 
-::: {.fragment}
+
 ```{r}
 #| include: FALSE
 #| eval: FALSE
@@ -932,11 +951,9 @@ GatingSetStorageLocation <- file.path(StorageLocation, "TheGatingSet.gs")
 save_gs(MyGatingSet, GatingSetStorageLocation)
 ```
 
-:::
 
 ---
 
-::: {.fragment}
 ```{r}
 #| include: FALSE
 
@@ -948,8 +965,6 @@ GatingSetStorageLocation <- file.path(StorageLocation, "TheGatingSet.gs")
 
 MyGatingSet <- load_gs(GatingSetStorageLocation)
 ```
-
-:::
 
 ---
 
@@ -974,6 +989,8 @@ plot(MyGatingSet)
 And with that done, let's quickly check the gates using `ggcyto` `autoplot()` function, switching between specimen index values to double check. 
 :::
 :::
+
+---
 
 ::: {.fragment}
 ```{r}
@@ -1785,6 +1802,8 @@ For CellConcentration, we retrieved both start and end time. Look up information
 ---
 
 ![](images/TakeAway.png)
+
+---
 
 ::: {style="text-align: right;"}
 [![AGPL-3.0](https://www.gnu.org/graphics/agplv3-with-text-162x68.png)](https://www.gnu.org/licenses/agpl-3.0.en.html) [![CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
