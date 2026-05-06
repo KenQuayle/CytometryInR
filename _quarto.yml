@@ -20,6 +20,11 @@ project:
     - 07_*   
     - 08_* 
     - 09_*
+<<<<<<< HEAD
+=======
+    - 10_*
+    - 11_*
+>>>>>>> e370d44cf7accae40886a4ae214963b84c7535b1
 website:
   google-analytics: "G-LZ35J3XE4D"
   announcement: 
@@ -96,7 +101,15 @@ website:
       - text: "09 - It's Raining Functions!"
         href: course/09_Functions/index.qmd 
     - section: "Cytometry Core"
+<<<<<<< HEAD
       href: Schedule.qmd
+=======
+      contents:
+      - text: "10 - Downsampling and Concatenation"
+        href: course/10_Downsampling/index.qmd
+      - text: "11 - Data for Statistics"
+        href: course/11_DataForStats/index.qmd
+>>>>>>> e370d44cf7accae40886a4ae214963b84c7535b1
     - section: "Beyond the Sandbox"
       href: Schedule.qmd
     - section: "The World is your Oyster"
