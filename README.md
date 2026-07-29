@@ -4,7 +4,11 @@ Cytometry in R is a free virtual mini-course being organized by the [Flow Cytome
 
 We are excited that so many individuals worldwide have chosen to take part, and we look forward to helping you get started on your own learning journeys. 
 
+<<<<<<< HEAD
 ![](/images/WorldwideSignups.png){width=100%}
+=======
+![](/images/WorldwideSignups.png)
+>>>>>>> 621989cdc93824105fd12763294e6446b235e0ef
 
 Click here to go to our [Course Website](https://umgcccfcsr.github.io/CytometryInR)
 
