@@ -29,6 +29,7 @@ project:
 =======
     - 12_*
     - 13_*
+    - 14_*
     - course/community/**/*.qmd
     - course/SDY3080/ImmPort.qmd
     - course/SDY3080/ImmPort_slides.qmd
@@ -133,7 +134,6 @@ website:
 =======
       - text: "13 - Spectral Similarities"
         href: course/13_SpectralSimilarities/index.qmd
->>>>>>> 4e894372fa10c003eddd80f1db4ff69343251cb1
     - section: "Beyond the Sandbox"
       href: Schedule.qmd
     - section: "The World is your Oyster"
@@ -142,6 +142,8 @@ website:
       contents: 
       - text: "Concatenate - Extended Cut"
         href: course/10_Downsampling/concatenate.qmd  
+      - text: "Unmixing - Extended Cut"
+        href: course/14_Unmixing/unmixing.qmd
     - section: "Spectral Flow Cytometry"
       contents:
         - text: "Retrieving ImmPort data"

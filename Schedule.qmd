@@ -171,18 +171,18 @@ and [Semi-supervised pipeline](https://davidrach.github.io/abstracts.html#cyto-2
 <br>
 <br>
 
+### Conference Break 3
+
+No class week of August 10, 2026. If you are attending the [BioC conference](https://bioc2026.bioconductor.org/), track me down at my [short talk](https://bioc2026.bioconductor.org/schedule/) on Monday, August 10th from 11:00-12:15pm. 
+
+<br>
+<br>
+
 ### Unmixing in R
 
 ![](images/Unmixing.png){width=75%}
 
 [**Week 14:**]{.underline} In the course of this session, we will attempt a reach goal of many, namely carry out unmixing of raw .fcs files using the spectral signatures we have isolated from our unmixing controls, and write to new .fcs files. After evaluating the necessary internals, we will explore how various current cytometry R packages have implemented their own unmixing functions, and the various limitations that each approach has encountered.  
-
-<br>
-<br>
-
-### Conference Break 3
-
-No class week of August 10, 2026. If you are attending the [BioC conference](https://bioc2026.bioconductor.org/), track me down at my [short talk](https://bioc2026.bioconductor.org/schedule/) on Monday, August 10th from 11:00-12:15pm. 
 
 <br>
 <br>

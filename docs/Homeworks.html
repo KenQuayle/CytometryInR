@@ -239,6 +239,7 @@ gtag('config', 'G-LZ35J3XE4D', { 'anonymize_ip': true});
   <li><a href="#week-11---data-for-statistics" id="toc-week-11---data-for-statistics" class="nav-link" data-scroll-target="#week-11---data-for-statistics">Week 11 - Data for Statistics</a></li>
   <li><a href="#week-12---spectral-signatures" id="toc-week-12---spectral-signatures" class="nav-link" data-scroll-target="#week-12---spectral-signatures">Week 12 - Spectral Signatures</a></li>
   <li><a href="#week-13---spectral-similarities" id="toc-week-13---spectral-similarities" class="nav-link" data-scroll-target="#week-13---spectral-similarities">Week 13 - Spectral Similarities</a></li>
+  <li><a href="#week-14---unmixing-in-r" id="toc-week-14---unmixing-in-r" class="nav-link" data-scroll-target="#week-14---unmixing-in-r">Week 14 - Unmixing in R</a></li>
   </ul>
 </nav>
     </div>
@@ -874,7 +875,7 @@ gtag('config', 'G-LZ35J3XE4D', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We assembled “Dataset”, consisting of the three signature matrices. Use <code>dplyr</code> and <code>strinr</code> to filter for any “APC” fluorophore. Pass this smaller dataset through the various steps from today (visualize, cosine, UDS, kappa), saving images or taking screenshots as appropiate. Provide a summary blurb about the interactions you might encounter if you designed this “all-Red” panel.</p>
+<p>We assembled “Dataset”, consisting of the three signature matrices. Use <code>dplyr</code> and <code>stringr</code> to filter for any “APC” fluorophore. Pass this smaller dataset through the various steps from today (visualize, cosine, UDS, kappa), saving images or taking screenshots as appropiate. Provide a summary blurb about the interactions you might encounter if you designed this “all-Red” panel.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Problem 2">
@@ -904,6 +905,53 @@ gtag('config', 'G-LZ35J3XE4D', { 'anonymize_ip': true});
 </div>
 </div>
 <p>Click <a href="https://github.com/UMGCCCFCSR/CytometryInR/pulls?q=label%3A%22Week+13%22">here</a> to see previous community attempts at answering these optional take-home problems.</p>
+<p>Stay tuned for our <a href="">walk-through</a> answers on Course section completion.</p>
+</section>
+<section id="week-14---unmixing-in-r" class="level1">
+<h1>Week 14 - Unmixing in R</h1>
+<p><img src="./course/14_Unmixing/images/TakeAway1.jpg" class="img-fluid"></p>
+<p>Redirect to <a href="./course/14_Unmixing/index.html">Week 13</a> content.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Problem 1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Problem 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Modify <code>OldFashionedUnmix()</code>’s returnType argument to instead of returning a “.fcs” file or a “residual” plot, to also returned the Unmixed data.frame, as well as the flowFrame (since both can be useful!). Add any conditional statements or arguments as you deem necessary.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Problem 2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Problem 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We briefly looked at the residual plots, including a case where we left out BUV805 CD4 and saw corresponding increase on those detectors in the residual plot. Rerun this example with a signature matrix missing one of the fluorophores, selecting returnType = “residual” to get back the residual plot. At this point, rerun with returnType = “fcs”, and generate a badly unmixed .fcs file. Then repeat this process with a signature matrix that contains all the signature references. Visualizing the two .fcs files, which fluorophores ended up having messed up unmixing due to the exclusion, and which ones were mostly unaffected?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Problem 3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Problem 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>One of the first packages that I encountered that implemented unmixing in R was Christopher Hall’s <a href="https://github.com/hally166/flowUnmix">flowUnmix</a> package. Since, several additional R packages have also implemented ways to unmix using various methods. While how they process their unmixing controls to get their signature matrices often vary wildly, at the heart the basic unmixing steps are similar, with choice of unmixing method often just needing to swtich out <code>lsfit()</code> for another function that implements the other method. Since you may be interested in implementing one of these methods on your own in the future, lets go on a treasure hunt.</p>
+<p>For these 2 packages (<a href="https://github.com/hally166/flowUnmix/tree/main/R">flowUnmix</a>, and <a href="https://github.com/DrCytometer/AutoSpectral/tree/master/R">Autospectral</a>), dive into their GitHub repositories and open their R folder. Check the .R files for any with an “unmixing-something-or-order” style name and examine it. Try reading your way through the code until you encounter the function that actually carries out the unmixing. Look up that functions original package, and check the help file. Take a screenshot, and report back. Feel free to repeat for any unmixing methods of interest (OLS, NNLS, WLS, etc.)</p>
+</div>
+</div>
+<p>Click <a href="https://github.com/UMGCCCFCSR/CytometryInR/pulls?q=label%3A%22Week+14%22">here</a> to see previous community attempts at answering these optional take-home problems.</p>
 <p>Stay tuned for our <a href="">walk-through</a> answers on Course section completion.</p>
 
 
