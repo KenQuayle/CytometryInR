@@ -28,8 +28,14 @@ project:
 >>>>>>> e370d44cf7accae40886a4ae214963b84c7535b1
 =======
     - 12_*
+    - 13_*
     - course/community/**/*.qmd
-    - course/SDY3080/*.qmd
+    - course/SDY3080/ImmPort.qmd
+    - course/SDY3080/ImmPort_slides.qmd
+    - course/SDY3080/SetUp.qmd
+    - course/SDY3080/SetUp_slides.qmd
+    - course/SDY3080/SignatureMatrices.qmd
+    - course/SDY3080/SignatureMatrices_slides.qmd
 execute:
   freeze: auto
 >>>>>>> 621989cdc93824105fd12763294e6446b235e0ef
@@ -122,7 +128,12 @@ website:
 =======
       - text: "12 - Spectral Signatures"
         href: course/12_SpectralSignatures/index.qmd
+<<<<<<< HEAD
 >>>>>>> 621989cdc93824105fd12763294e6446b235e0ef
+=======
+      - text: "13 - Spectral Similarities"
+        href: course/13_SpectralSimilarities/index.qmd
+>>>>>>> 4e894372fa10c003eddd80f1db4ff69343251cb1
     - section: "Beyond the Sandbox"
       href: Schedule.qmd
     - section: "The World is your Oyster"
